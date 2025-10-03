@@ -2,28 +2,6 @@
 
 Sistema para geração de faturas de locação desenvolvido em Java com arquitetura MVC (Model-View-Controller).
 
-## Estrutura do Projeto
-
-O projeto segue a arquitetura MVC padrão para Java:
-
-```
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── geradordefaturas/
-│   │   │           ├── com.geradordefaturas.locacao.model/          # Camada de modelo (entidades e lógica de negócio)
-│   │   │           ├── view/           # Camada de visualização (interface com usuário)
-│   │   │           └── com.geradordefaturas.locacao.controller/     # Camada de controle (lógica de aplicação)
-│   │   └── resources/                  # Arquivos de configuração e recursos
-│   └── test/
-│       └── java/
-│           └── com/
-│               └── geradordefaturas/   # Testes unitários e de integração
-├── pom.xml                             # Configuração Maven
-└── README.md                           # Este arquivo
-```
-
 ## Arquitetura MVC
 
 ### Model (Modelo)
