@@ -1,0 +1,21 @@
+*{
+    -fx-font-family: Ubuntu, Verdana, Geneva, Tahoma, Verdana, sans-serif;
+}
+
+#cabecalho {
+    -fx-background-color: #010754;
+    -fx-font: bold 20px/1.5 Ubuntu;
+    -fx-text-background-color: #ffffff;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.49), 5, 0.5, 0, 2);
+}
+.button{
+    -fx-font: bold 15px/1.5 Ubuntu;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.49), 5, 0.5, 0, 2);
+}
+.button:hover{
+    -fx-background-color: #7e7e7e;
+    -fx-cursor: hand;
+}

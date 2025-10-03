@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane prefHeight="700.0" prefWidth="600.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.contratos.ContratosFormController">
+    <BorderPane prefHeight="698.0" prefWidth="598.0">
+        <top>
+            <Label id="cabecalho" alignment="CENTER" prefHeight="32.0" prefWidth="660.0" stylesheets="@../css/view.css"
+                   text="Criação de Contrato" textAlignment="CENTER" BorderPane.alignment="CENTER"/>
+        </top>
+        <center>
+            <VBox prefHeight="641.0" prefWidth="596.0" spacing="20.0" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </padding>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                        <GridPane prefHeight="135.0" prefWidth="300.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Label style="-fx-font-size: 15;" text="Cliente:"/>
+                            <Label style="-fx-font-size: 15;" text="Nª Contrato:" GridPane.rowIndex="1"/>
+                            <Label style="-fx-font-size: 15;" text="Data Fim:" GridPane.rowIndex="2"/>
+                            <TextField fx:id="txtCliente" GridPane.columnIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        </GridPane>
+                        <GridPane prefWidth="300.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Label style="-fx-font-size: 15;" text="Vendedor:"/>
+                            <Label style="-fx-font-size: 15;" text="Data Início" GridPane.rowIndex="1"/>
+                            <Label style="-fx-font-size: 15;" text="Reajuste:" GridPane.rowIndex="2"/>
+                            <TextField GridPane.columnIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        </GridPane>
+                    </HBox>
+                    <HBox prefHeight="55.0" prefWidth="545.0" spacing="10.0">
+                        <Label style="-fx-font-size: 15;" text="Local Obra:"/>
+                        <TextField prefHeight="23.0" prefWidth="447.0"/>
+                    </HBox>
+                </VBox>
+                <VBox prefHeight="241.0" prefWidth="545.0" spacing="10.0">
+                    <Label style="-fx-font-size: 18;" text="Itens do Contrato:"/>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="75.0" text="Equipamento"/>
+                            <TableColumn prefWidth="75.0" text="Quantidade"/>
+                            <TableColumn prefWidth="75.0" text="Valor Unitário"/>
+                            <TableColumn prefWidth="75.0" text="Valor Total"/>
+                            <TableColumn prefWidth="75.0" text="Indenização"/>
+                        </columns>
+                        <columnResizePolicy>
+                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                        </columnResizePolicy>
+                    </TableView>
+                    <Button mnemonicParsing="false" onAction="#adicionarEquipamento"
+                            style="-fx-background-radius: 100; -fx-border-radius: 110;"
+                            text="Adicionar Equipamento"/>
+                </VBox>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0"
+                                           prefWidth="195.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0"
+                                           prefWidth="363.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <Label style="-fx-font-size: 15;" text="Valor Total Locação:"/>
+                    <Label style="-fx-font-size: 15;" text="Valor Total Indenização:" GridPane.rowIndex="1"/>
+                    <Label style="-fx-font-size: 15;" text="&lt;&lt;sample&gt;&gt;" GridPane.columnIndex="1"/>
+                    <Label prefHeight="17.0" prefWidth="117.0" style="-fx-font-size: 15;"
+                           text="&lt;&lt;sample&gt;&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                </GridPane>
+                <HBox prefHeight="49.0" prefWidth="545.0" spacing="10.0">
+                    <Button mnemonicParsing="false" onAction="#salvar"
+                            style="-fx-background-radius: 100; -fx-border-radius: 110;" text="Salvar"/>
+                    <Button mnemonicParsing="false" onAction="#cancelar"
+                            style="-fx-background-radius: 100; -fx-border-radius: 110;" text="Cancelar"/>
+                </HBox>
+            </VBox>
+        </center>
+        <bottom>
+            <Label prefHeight="17.0" prefWidth="641.0" text="©Grupo Nova, 2025" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+            </Label>
+        </bottom>
+    </BorderPane>
+</ScrollPane>

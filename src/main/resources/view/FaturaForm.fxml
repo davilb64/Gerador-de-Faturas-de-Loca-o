@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="300.0" prefWidth="585.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.faturas.FaturaFormController">
+   <top>
+      <Label id="cabecalho" alignment="CENTER" prefHeight="32.0" prefWidth="660.0" stylesheets="@../css/view.css" text="Nova Fatura" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+       <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+           <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+           </padding>
+           <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <GridPane prefHeight="100.0" prefWidth="294.0">
+                   <columnConstraints>
+                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="109.0"/>
+                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="160.0"/>
+                   </columnConstraints>
+                   <rowConstraints>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   </rowConstraints>
+                   <Label style="-fx-font-size: 15;" text="Contrato:"/>
+                   <Label style="-fx-font-size: 15;" text="Nº Fatura:" GridPane.rowIndex="1"/>
+                   <Label style="-fx-font-size: 15;" text="Vencimento:" GridPane.rowIndex="2"/>
+                   <Label style="-fx-font-size: 15;" text="[Selecione Contrato]" GridPane.columnIndex="1"
+                          GridPane.rowIndex="1"/>
+                   <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                   <TextField fx:id="txtContrato" prefHeight="23.0" prefWidth="134.0" GridPane.columnIndex="1"/>
+               </GridPane>
+               <GridPane prefHeight="100.0" prefWidth="286.0">
+                   <columnConstraints>
+                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="129.0"/>
+                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="163.0"/>
+                   </columnConstraints>
+                   <rowConstraints>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   </rowConstraints>
+                   <Label style="-fx-font-size: 15;" text="Cliente:"/>
+                   <Label prefHeight="17.0" prefWidth="110.0" style="-fx-font-size: 15;" text="Data Emissão:"
+                          GridPane.rowIndex="1"/>
+                   <Label style="-fx-font-size: 15;" text="Valor:" GridPane.rowIndex="2"/>
+                   <Label style="-fx-font-size: 15;" text="[Selecione Contrato]" GridPane.columnIndex="1"/>
+                   <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                   <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+               </GridPane>
+           </HBox>
+           <Label style="-fx-font-size: 18;" text="Descrição: [Selecione Contrato e Data]"/>
+           <HBox prefHeight="49.0" prefWidth="545.0" spacing="10.0">
+               <Button mnemonicParsing="false" onAction="#salvar"
+                       style="-fx-background-radius: 100; -fx-border-radius: 110;" text="Salvar"/>
+               <Button mnemonicParsing="false" onAction="#cancelar"
+                       style="-fx-background-radius: 100; -fx-border-radius: 110;" text="Cancelar"/>
+           </HBox>
+       </VBox>
+   </center>
+   <bottom>
+      <Label prefHeight="17.0" prefWidth="641.0" text="©Grupo Nova, 2025" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </bottom>
+</BorderPane>

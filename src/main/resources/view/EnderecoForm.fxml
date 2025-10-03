@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="450.0" prefWidth="585.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.enderecos.EnderecoFormController">
+   <top>
+      <Label id="cabecalho" alignment="CENTER" prefHeight="32.0" prefWidth="660.0" stylesheets="@../css/view.css" text="Novo Endereço" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <Label prefHeight="17.0" prefWidth="641.0" text="©Grupo Nova, 2025" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </bottom>
+   <center>
+       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+           <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="120.0"/>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="435.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               </rowConstraints>
+               <padding>
+                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </padding>
+               <Label style="-fx-font-size: 15;" text="Logradouro:"/>
+               <Label style="-fx-font-size: 15;" text="Número:" GridPane.rowIndex="1"/>
+               <Label style="-fx-font-size: 15;" text="Complemento:" GridPane.rowIndex="2"/>
+               <Label style="-fx-font-size: 15;" text="Bairro:" GridPane.rowIndex="3"/>
+               <Label style="-fx-font-size: 15;" text="UF:" GridPane.rowIndex="5"/>
+               <Label style="-fx-font-size: 15;" text="País:" GridPane.rowIndex="7"/>
+               <Label style="-fx-font-size: 15;" text="Município:" GridPane.rowIndex="4"/>
+               <Label style="-fx-font-size: 15;" text="CEP:" GridPane.rowIndex="6"/>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                   <TextField fx:id="txtLogradouro" prefHeight="23.0" prefWidth="519.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                   <TextField prefHeight="23.0" prefWidth="130.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                   <TextField prefHeight="23.0" prefWidth="300.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                   <TextField prefWidth="300.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                   <TextField prefWidth="300.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                   <TextField prefHeight="23.0" prefWidth="73.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                   <TextField prefWidth="130.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                   <TextField prefWidth="200.0"/>
+                   <Region prefHeight="200.0" prefWidth="200.0"/>
+               </HBox>
+           </GridPane>
+           <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <padding>
+                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+               </padding>
+               <Button mnemonicParsing="false" onAction="#salvar" text="Salvar"/>
+               <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar"/>
+           </HBox>
+       </VBox>
+   </center>
+</BorderPane>

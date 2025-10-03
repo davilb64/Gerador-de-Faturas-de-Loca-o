@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="300.0" prefWidth="585.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.equipamentos.VerEquipamentoView">
+   <top>
+      <Label id="cabecalho" alignment="CENTER" prefHeight="32.0" prefWidth="660.0" stylesheets="@../css/view.css" text="Cadastro/Edição de Equipamentos" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+       <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+           <padding>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+           </padding>
+           <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="109.0"/>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="436.0" minWidth="10.0" prefWidth="436.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+               </rowConstraints>
+               <Label style="-fx-font-size: 15;" text="SKU:"/>
+               <Label style="-fx-font-size: 15;" text="Nome:" GridPane.rowIndex="1"/>
+               <Label style="-fx-font-size: 15;" text="Descrição:" GridPane.rowIndex="2"/>
+               <Label style="-fx-font-size: 15;" text="Preço Base:" GridPane.rowIndex="3"/>
+               <Label style="-fx-font-size: 15;" text="Preço Mínimo:" GridPane.rowIndex="4"/>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                   <TextField fx:id="txtSKU" disable="true" prefWidth="100.0" text="&lt;&lt;sample&gt;&gt;"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                   <TextField disable="true" prefWidth="200.0" text="&lt;&lt;sample&gt;&gt;"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                   <TextField disable="true" prefHeight="23.0" prefWidth="554.0" text="&lt;&lt;sample&gt;&gt;"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                   <TextField disable="true" prefWidth="100.0" text="&lt;&lt;sample&gt;&gt;"/>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                   <TextField disable="true" prefWidth="100.0" text="&lt;&lt;sample&gt;&gt;"/>
+               </HBox>
+           </GridPane>
+           <HBox prefHeight="49.0" prefWidth="545.0" spacing="10.0">
+               <Button mnemonicParsing="false" onAction="#salvar"
+                       style="-fx-background-radius: 100; -fx-border-radius: 110;" text="Sair"/>
+           </HBox>
+       </VBox>
+   </center>
+   <bottom>
+      <Label prefHeight="17.0" prefWidth="641.0" text="©Grupo Nova, 2025" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </bottom>
+</BorderPane>
