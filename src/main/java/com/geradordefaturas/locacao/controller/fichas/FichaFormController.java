@@ -1,20 +1,15 @@
-package controller.faturas;
+package com.geradordefaturas.locacao.controller.fichas;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class FaturaFormController {
+public class FichaFormController {
     @FXML
-    private TextField txtContrato;
+    private Label lblContrato;
 
     private boolean confirmado = false;
 
-    @FXML
-    private void salvar() {
-        confirmado = true;
-        fechar();
-    }
 
     @FXML
     private void cancelar() {
@@ -23,12 +18,11 @@ public class FaturaFormController {
     }
 
     private void fechar() {
-        Stage stage = (Stage) txtContrato.getScene().getWindow();
+        Stage stage = (Stage) lblContrato.getScene().getWindow();
         stage.close();
     }
 
     public boolean isConfirmado() {
         return confirmado;
     }
-
 }

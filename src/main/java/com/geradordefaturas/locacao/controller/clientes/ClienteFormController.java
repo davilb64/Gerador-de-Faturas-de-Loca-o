@@ -1,4 +1,4 @@
-package controller.clientes;
+package com.geradordefaturas.locacao.controller.clientes;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

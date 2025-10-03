@@ -12,9 +12,9 @@ O projeto segue a arquitetura MVC padrão para Java:
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── geradordefaturas/
-│   │   │           ├── model/          # Camada de modelo (entidades e lógica de negócio)
+│   │   │           ├── com.geradordefaturas.locacao.model/          # Camada de modelo (entidades e lógica de negócio)
 │   │   │           ├── view/           # Camada de visualização (interface com usuário)
-│   │   │           └── controller/     # Camada de controle (lógica de aplicação)
+│   │   │           └── com.geradordefaturas.locacao.controller/     # Camada de controle (lógica de aplicação)
 │   │   └── resources/                  # Arquivos de configuração e recursos
 │   └── test/
 │       └── java/

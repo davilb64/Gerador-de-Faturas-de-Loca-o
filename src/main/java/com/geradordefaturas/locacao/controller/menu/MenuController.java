@@ -1,7 +1,7 @@
-package controller.menu;
+package com.geradordefaturas.locacao.controller.menu;
 
 import javafx.fxml.FXML;
-import util.ScreenController;
+import com.geradordefaturas.locacao.util.ScreenController;
 
 public class MenuController {
     @FXML

@@ -1,4 +1,4 @@
-package controller.contratos;
+package com.geradordefaturas.locacao.controller.contratos;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

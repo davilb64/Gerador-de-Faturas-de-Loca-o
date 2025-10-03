@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="250.0" prefWidth="500.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.vendedor.VendedorFormController">
+<BorderPane prefHeight="250.0" prefWidth="500.0" stylesheets="@../css/view.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geradordefaturas.locacao.controller.vendedor.VendedorFormController">
     <top>
         <Label id="cabecalho" alignment="CENTER" prefHeight="32.0" prefWidth="660.0" stylesheets="@../css/view.css" text="Cadastro/Edição Vendedor" textAlignment="CENTER" BorderPane.alignment="CENTER" />
     </top>

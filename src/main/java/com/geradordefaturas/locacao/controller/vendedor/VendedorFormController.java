@@ -1,4 +1,4 @@
-package controller.vendedor;
+package com.geradordefaturas.locacao.controller.vendedor;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

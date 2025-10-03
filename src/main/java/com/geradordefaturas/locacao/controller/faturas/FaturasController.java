@@ -1,4 +1,4 @@
-package controller.contratos;
+package com.geradordefaturas.locacao.controller.faturas;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -6,18 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import util.ScreenController;
+import com.geradordefaturas.locacao.util.ScreenController;
 
 import java.io.IOException;
 
-public class ContratosController {
-    public void abrirModalContrato() {
+public class FaturasController {
+    public void abrirModalFatura() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ContratoForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/FaturaForm.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
-            stage.setTitle("Criação de Contrato");
+            stage.setTitle("Criação de Fatura");
             stage.setScene(new Scene(root));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();

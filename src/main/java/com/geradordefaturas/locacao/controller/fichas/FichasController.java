@@ -1,4 +1,4 @@
-package controller.fichas;
+package com.geradordefaturas.locacao.controller.fichas;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import util.ScreenController;
+import com.geradordefaturas.locacao.util.ScreenController;
 
 import java.io.IOException;
 

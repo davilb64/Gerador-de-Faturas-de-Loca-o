@@ -1,15 +1,14 @@
-package controller.equipamentos;
+package com.geradordefaturas.locacao.controller.enderecos;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class EquipamentoFormController {
+public class EnderecoFormController {
     @FXML
-    private TextField txtSKU;
+    private TextField txtLogradouro;
 
     private boolean confirmado = false;
-
     @FXML
     private void salvar() {
         confirmado = true;
@@ -23,7 +22,7 @@ public class EquipamentoFormController {
     }
 
     private void fechar() {
-        Stage stage = (Stage) txtSKU.getScene().getWindow();
+        Stage stage = (Stage) txtLogradouro.getScene().getWindow();
         stage.close();
     }
 

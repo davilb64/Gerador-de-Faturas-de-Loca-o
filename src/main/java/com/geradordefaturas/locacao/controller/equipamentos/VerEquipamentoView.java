@@ -1,4 +1,4 @@
-package controller.equipamentos;
+package com.geradordefaturas.locacao.controller.equipamentos;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

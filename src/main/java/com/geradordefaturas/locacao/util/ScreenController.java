@@ -1,4 +1,4 @@
-package util;
+package com.geradordefaturas.locacao.util;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
